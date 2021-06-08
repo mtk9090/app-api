@@ -2,7 +2,8 @@ from flask import Flask,render_template,request
 import requests
 
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
+
 @app.route('/',methods=['GET', 'POST'])
 def index():
     search = request.form.get('nome_digitado')
