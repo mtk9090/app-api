@@ -30,6 +30,7 @@ strong {color:#399ef7;font-family;Arial}
 	{% if resp|length > 8 %}
 
 	<center><h1>Resultado da Busca</h1></center>
+        <h5>IP: <span> {{ resp.query }} </span></h5>
 	<h5>ESTATUS: <span> {{ resp.status }} </span></h5>
 	<h5>PAIS: <span> {{ resp.country }} </span></h5>
 	<h5>CODIGO DO PAIS: <span>{{ resp.countryCode }} </span></h5>
@@ -43,7 +44,7 @@ strong {color:#399ef7;font-family;Arial}
 	<h5>ISP: <span> {{ resp.isp }} </span></h5>
 	<h5>ORG: <span> {{ resp.org }} </span></h5>
 	<h5>AS: <span> {{ resp.as }} </span></h5>
-	<h5>AS: <span> {{ resp.query }} </span></h5>
+
 
 	{% else %}
 	<h5>digite um ip ou site</h5>
