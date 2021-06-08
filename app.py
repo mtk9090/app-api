@@ -3,7 +3,7 @@ import requests
 
 
 app = Flask(__name__)
-@app.route('/',methods=['GET', 'POST'])
+@app.route('/arquivo:app',methods=['GET', 'POST'])
 def index():
     search = request.form.get('nome_digitado')
     print(search)
