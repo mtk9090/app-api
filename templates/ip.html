@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport"content="width=device-width,initial-scale=1">
+<title></title>
+<style type="text/css">
+h5 {color:#18ff08;}
+h1 {color:#18ff08;}
+marquee {color:#18ff08;}
+span {color:#9c04f7;}
+body {background-color:#000800;}
+
+input[type="submit"] {background-color:#1877F2; border:none;color:white;width:250px;height:30px;margin: 5px;border-radius: 5px;}
+input[type="text"] {width:250px;height:30px;margin: 5px;}
+input[type="password"] {width:250px;height:30px;margin: 5px;}
+strong {color:#399ef7;font-family;Arial}
+
+</style>
+</head>
+<body>
+	<marquee>seja bem vindo a central </marquee>
+	<br><br>
+	<center>
+	<form action="{{url_for('index')}}" method="post">
+	<input type="text" name = "nome_digitado" placeholder="Digite um ip">
+	<br>
+	<input type="submit" value="busca">
+	</form>
+
+	{% if resp|length > 8 %}
+
+	<center><h1>Resultado da Busca</h1></center>
+	<h5>ESTATUS: <span> {{ resp.status }} </span></h5>
+	<h5>PAIS: <span> {{ resp.country }} </span></h5>
+	<h5>CODIGO DO PAIS: <span>{{ resp.countryCode }} </span></h5>
+	<h5>REGIÃO: <span> {{ resp.region }} </span></h5>
+	<h5>NOME DA REGIÃO: <span> {{ resp.regionName }} </span></h5>
+	<h5>CIDADE: <span> {{ resp.city }} </span></h5>
+	<h5>CODIGO POSTAL: <span> {{ resp.zip }} </span></h5>
+	<h5>LAT: <span> {{ resp.lat }} </span></h5>
+	<h5>LON: <span> {{ resp.lon }} </span></h5>
+	<h5>FUSO HORARIO: <span> {{ resp.timezone }} </span></h5>
+	<h5>ISP: <span> {{ resp.isp }} </span></h5>
+	<h5>ORG: <span> {{ resp.org }} </span></h5>
+	<h5>AS: <span> {{ resp.as }} </span></h5>
+	<h5>AS: <span> {{ resp.query }} </span></h5>
+
+	{% else %}
+	<h5>digite um ip ou site</h5>
+
+	{% endif %}
+	</center>
+</body>
+
+</html>
+
+
+
+
+
