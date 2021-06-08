@@ -27,7 +27,7 @@ strong {color:#399ef7;font-family;Arial}
 	<input type="submit" value="busca">
 	</form>
 
-	{% if resp|length > 8 %}
+	{% if resp|length >= 8 %}
 
 	<center><h1>Resultado da Busca</h1></center>
         <h5>IP: <span> {{ resp.query }} </span></h5>
