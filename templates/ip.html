@@ -30,7 +30,8 @@ strong {color:#399ef7;font-family;Arial}
 	{% if resp|length >= 8 %}
 
 	<center><h1>Resultado da Busca</h1></center>
-        <h5>IP: <span> {{ resp.query }} </span></h5>
+        <h5>IP: <span> {{ resp.query }} </span></h5> 
+        <h5>CONTINENTE: <span> {{ resp.continent }} </span></h5>
 	<h5>PAIS: <span> {{ resp.country }} </span></h5>
 	<h5>CODIGO DO PAIS: <span>{{ resp.countryCode }} </span></h5>
 	<h5>REGIÃO: <span> {{ resp.region }} </span></h5>
