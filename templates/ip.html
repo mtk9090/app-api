@@ -32,18 +32,27 @@ strong {color:#399ef7;font-family;Arial}
 	<center><h1>Resultado da Busca</h1></center>
         <h5>IP: <span> {{ resp.query }} </span></h5> 
         <h5>CONTINENTE: <span> {{ resp.continent }} </span></h5>
+        <h5>CODOGO DO CONTINENTE: <span> {{ resp.continentCode }} </span></h5>
 	<h5>PAIS: <span> {{ resp.country }} </span></h5>
 	<h5>CODIGO DO PAIS: <span>{{ resp.countryCode }} </span></h5>
 	<h5>REGIÃO: <span> {{ resp.region }} </span></h5>
 	<h5>NOME DA REGIÃO: <span> {{ resp.regionName }} </span></h5>
 	<h5>CIDADE: <span> {{ resp.city }} </span></h5>
+        <h5>DISTRITO: <span> {{ resp.distric }} </span></h5>
 	<h5>CODIGO POSTAL: <span> {{ resp.zip }} </span></h5>
 	<h5>LAT: <span> {{ resp.lat }} </span></h5>
 	<h5>LON: <span> {{ resp.lon }} </span></h5>
 	<h5>FUSO HORARIO: <span> {{ resp.timezone }} </span></h5>
+       <h5>OFFSET: <span> {{ resp.offset}} </span></h5>
+       <h5>MOEDA DO PAIS: <span> {{ resp.currency }} </span></h5>
 	<h5>ISP: <span> {{ resp.isp }} </span></h5>
 	<h5>ORG: <span> {{ resp.org }} </span></h5>
 	<h5>AS: <span> {{ resp.as }} </span></h5>
+        <h5>AS NOME: <span> {{ resp.asname}} </span></h5>
+        <h5>REVERSO: <span> {{ resp.reverse }} </span></h5>
+        <h5>MOBILE?: <span> {{ resp.mobile }} </span></h5>
+        <h5>PROXY?: <span> {{ resp.proxy }} </span></h5>
+        <h5>HOSTING?: <span> {{ resp.hosting }} </span></h5>
 
 
 	{% else %}
