@@ -7,9 +7,18 @@ app = Flask(__name__, static_folder='static')
 @app.route('/',methods=['GET', 'POST'])
 def index():
     search = request.form.get('nome_digitado')
-    print(search)
+    #print(search)
     try:
-        url = f'''http://ip-api.com/json/{search}?fields=status,message,continent,continentCode,country,countryCode,region,regionName,city,district,zip,lat,lon,timezone,offset,currency,isp,org,as,asname,reverse,mobile,proxy,hosting,query''''
+        url = f'''
+http://ip-api.com/json/{search}?fields=status,
+message,continent,continentCode,
+country,countryCode,region,
+regionName,city,district,
+zip,lat,lon,timezone,
+offset,currency,isp,org,
+as,asname,reverse,mobile,
+proxy,hosting,query
+''''
         req = requests.get(url)
         resp = req.json()
 
