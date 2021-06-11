@@ -27,7 +27,8 @@ def index():
 
 @app.errorhandler(404)
 def page_not_found(e):
-    return render_template('404.html'), 404
+    use_agente = request.headers.get('User-Agent')
+    return render_template('404.html',use_agente=use_agente), 404
 
 
 if __name__ == '__main__':
